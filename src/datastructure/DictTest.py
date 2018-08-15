@@ -3,6 +3,7 @@ Created on Aug 14, 2018
 
 @author: Subhashis
 '''
+from builtins import int
 
 
 def studentVerification():
@@ -62,4 +63,39 @@ def checkNumberOfVowels():
     
     for k, v in sorted(d.sorteditems()):
         print("{} occurred {} times".format(k, v))  
+        
+        
+        
+def storeStudentDetails():
+    n=int(input("Enter how many student details you want to store :"))
+    d={}
+    
+    for i in range(n):
+        name=input("Enter Name :")
+        marks=int(input("Enter marks :"))
+        d[name]=marks
+        i=i+1
+        
+    while True:
+        name=input("Enter Student Name to get marks")
+        marks=d.get(name, -1)
+        
+        if(marks==-1):
+            print("Student not found")
+            
+        else:
+            print("the marks of {} is {}".format(name, marks))
+        option=input("Do you want to find another student:[YES | NO] ")
+        
+        if option=="NO".casefold():
+            break
+    print("Thanks for using our application ")
+        
+    
+    
+    
+    
+    
+    
+    
     
