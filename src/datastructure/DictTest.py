@@ -87,7 +87,7 @@ def storeStudentDetails():
             print("the marks of {} is {}".format(name, marks))
         option=input("Do you want to find another student:[YES | NO] ")
         
-        if option=="NO".casefold():
+        if option=="NO":
             break
     print("Thanks for using our application ")
         
